@@ -16,7 +16,7 @@ const KakaoAuthHandler = (props) => {
             await axios
             .get(`http://localhost:8080/user/kakao/callback?code=${code}`)
             .then((res) => {
-                localStorage.setItem('token', res.headers.authorization)
+                console.log(res.headers.authorization);
                 window.location.href = "/main";
             })
         }

@@ -1,20 +1,25 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 import axios from "axios";
+import {useSelector} from "react-redux";
 
 const urlConfig = {
     baseURL: process.env.REACT_APP_BACKEND_BASE_URL
 }
 const BoardGroupList = (props) => {
+    const { auth } = useSelector(({ auth }) => ({
+        auth: auth.auth,
+    }));
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+
         const boardGroupList = async () => {
             await axios
                 .post(`${urlConfig.baseURL}/group/all`, null, {
                     headers: {
-                        Authorization : localStorage.getItem('Authorization'),
+                        Authorization : auth,
                     }
                 })
                 .then((res) => {
@@ -27,7 +32,6 @@ const BoardGroupList = (props) => {
                     setLoading(false);
                 })
         }
-
         boardGroupList();
 
     }, []);

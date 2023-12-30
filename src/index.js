@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from './modules';
 import {persistStore} from "redux-persist";
 import {PersistGate} from "redux-persist/integration/react";
+import 'tailwindcss/tailwind.css';
 
 const persistor = persistStore(store);
 const root = ReactDOM.createRoot(document.getElementById('root'));

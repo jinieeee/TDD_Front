@@ -23,6 +23,11 @@
     "styled-components": "^6.0.5",
     "web-vitals": "^2.1.4"
   },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
@@ -45,5 +50,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:80"
+  "proxy": "http://localhost:80",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  }
 }

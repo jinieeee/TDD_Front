@@ -45,6 +45,9 @@ const BoardGroupList = (props) => {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                         {data.map((item) => (
                             <article key={item.groupId} className="flex max-w-xl flex-col items-start justify-between">
+                                <div className="items-center mb-7 rounded-2xl overflow-hidden h-52">
+                                    <img className="object-cover" src={item.thumbImgUrl}  alt="thumbnail"/>
+                                </div>
                                 <div className="flex items-center gap-x-4 text-xs">
                                     <time className="text-gray-500">
                                         yyyy년 MM월 dd일
@@ -65,7 +68,7 @@ const BoardGroupList = (props) => {
                                     <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">블로그 상세 내용 / 블로그 상세 내용 / 블로그 상세 내용</p>
                                 </div>
                                 <div className="relative mt-8 flex items-center gap-x-4">
-                                   {/* <img src={item.author.imageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
+                                    {/*<img src={item.thumbImgUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />*/}
                                     <div className="text-sm leading-6">
                                         <p className="font-semibold text-gray-900">
                                             <a>
@@ -73,8 +76,8 @@ const BoardGroupList = (props) => {
                                                 작성자입니다.
                                             </a>
                                         </p>
-                                        <p className="text-gray-600">{item.author.role}</p>
-                                    </div>*/}
+                                        {/*<p className="text-gray-600">{item.author.role}</p>*/}
+                                    </div>
                                 </div>
                             </article>
                         ))}

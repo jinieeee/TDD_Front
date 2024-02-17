@@ -29,7 +29,6 @@ const KakaoAuthHandler = (props) => {
 
     useEffect(() => {
         let code = new URL(window.location.href).searchParams.get('code')
-        debugger;
         const kakaoLogin = async () => {
             await axios
             .get(`${kakaoLoginConfig.callbackUri}/user/kakao/callback?code=${code}`)

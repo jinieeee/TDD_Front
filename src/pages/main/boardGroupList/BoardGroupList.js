@@ -17,7 +17,7 @@ const BoardGroupList = (props) => {
 
         const boardGroupList = async () => {
             await axios
-                .post(`${urlConfig.baseURL}/group/all`, null, {
+                .get(`${urlConfig.baseURL}/group/all`,{
                     headers: {
                         Authorization : auth,
                     }

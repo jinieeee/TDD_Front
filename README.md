@@ -6,11 +6,12 @@
 - React
 - React Router
 - Redux
+- Tailwind css
 
 ## [기능]
 ### 로그인
 - JWT 토큰을 리덕스 스토어에 보관
-- 로그인 외 REST api 요청 시 공통적으로 스토어의 JWT 토큰을 header에 추가하는 컴포넌트 사용
+- 로그인 외 REST api 요청 시 공통적으로 스토어의 JWT 토큰을 http header에 추가하는 컴포넌트 사용
 
 ## [참고자료]
 ### 도서

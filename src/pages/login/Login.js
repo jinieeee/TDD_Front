@@ -21,7 +21,7 @@ function Login() {
             </div>
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <h6 className="mb-5 text-center">continue with</h6>
+                    <h6 className="mb-5 text-center divider">continue with</h6>
                 </div>
                 <div>
                 <a onClick={kakaoLogin}>

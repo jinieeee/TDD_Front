@@ -1,7 +1,5 @@
 import axios from "axios" 
 import {useEffect} from "react"
-import {useDispatch, useSelector} from "react-redux";
-import {login} from "../../modules/auth";
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components'
 
@@ -18,27 +16,15 @@ const Container = styled.div`
 `
 
 const KakaoAuthHandler = (props) => {
-
-    const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    const { auth, authError } = useSelector(({ auth }) => ({
-        auth: auth.auth,
-        authError: auth.authError,
-    }))
 
     useEffect(() => {
         let code = new URL(window.location.href).searchParams.get('code')
-        debugger;
         const kakaoLogin = async () => {
             await axios
             .get(`${kakaoLoginConfig.callbackUri}/user/kakao/callback?code=${code}`)
             .then((res) => {
-                // localStorage.setItem("Authorization", res.headers.authorization);
-                const auth = res.headers.authorization;
-                dispatch(
-                    login({ auth })
-                );
+                localStorage.setItem("Authorization", res.headers.authorization);
                 navigate("/main");
             })
         }

@@ -6,7 +6,8 @@
 - React
 - React Router
 - Redux
-- Tailwind css
+- Styled-component
+- Storybook
 
 ## [기능]
 ### 로그인
@@ -18,6 +19,9 @@
 #### - 리액트를 다루는 기술
 
 ## [가이드]
+### Storybook
+- 스토리북을 적용하여 atom 단위의 컴포넌트 관리
+
 ### Commit Message
 - 양식
     - [카테고리] 개발 내용

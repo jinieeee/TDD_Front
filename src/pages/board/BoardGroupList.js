@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import restApi from "../../api/restApi";
 import {Link} from "react-router-dom";
 import {format} from "date-fns";
+import {Thumbnail} from "../../components/atoms/thumbnail";
 
 const BoardGroupList = (props) => {
 
@@ -33,9 +34,7 @@ const BoardGroupList = (props) => {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                         {data.map((item) => (
                                 <article key={item.groupId} className="flex max-w-xl flex-col items-start justify-between">
-                                    <div className="items-center mb-7 rounded-2xl overflow-hidden h-52">
-                                        <img className="object-cover" src={item.thumbImgUrl}  alt="thumbnail"/>
-                                    </div>
+                                    <Thumbnail variants="large" url={item.thumbImgUrl}></Thumbnail>
                                     <div className="flex items-center gap-x-4 text-xs">
                                         <time className="text-gray-500">
                                             {format(item.sysRegDtime, 'yyyy.MM.dd')}

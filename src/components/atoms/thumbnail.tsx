@@ -26,9 +26,9 @@ const ThumbnailContainer = styled.div<ThumbnailProps>`
     overflow: hidden;
 `
 
-export const Thumbnail = ({variants, url}) => {
+export const Thumbnail = ({variant, url}) => {
     return (
-        <ThumbnailContainer variant="large">
+        <ThumbnailContainer variant={variant}>
             <img className="object-cover" src={url} alt="thumbnail"/>
         </ThumbnailContainer>
     )

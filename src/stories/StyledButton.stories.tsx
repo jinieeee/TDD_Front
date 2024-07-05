@@ -2,7 +2,7 @@ import {Meta, StoryObj} from "@storybook/react";
 import {StyledButton} from "../components/atoms/styledButton";
 
 const meta:Meta<typeof StyledButton> = {
-    title: 'StyledButton',
+    title: 'Components/StyledButton',
     component: StyledButton,
     argTypes: {
         variant: {

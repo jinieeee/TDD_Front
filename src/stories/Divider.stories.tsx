@@ -2,7 +2,7 @@ import {Meta} from "@storybook/react";
 import {Divider} from "../components/atoms/divider";
 
 const meta:Meta<typeof Divider> = {
-    title: 'Divider',
+    title: 'Components/Divider',
     component: Divider,
 };
 

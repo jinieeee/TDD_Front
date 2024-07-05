@@ -2,7 +2,7 @@ import {Meta} from "@storybook/react";
 import {Tab, Tabs} from "../components/atoms/tabs";
 
 const meta:Meta<typeof Tabs> = {
-    title: 'Tabs',
+    title: 'Components/Tabs',
     component: Tabs,
 }
 

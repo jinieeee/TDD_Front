@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {useState} from "react";
+import {StyledLabel} from "./styledLabel";
 
 const variants = {
     default: {
@@ -60,11 +61,6 @@ const StyledCheckbox = styled.input<CheckboxProps>`
         background-repeat: no-repeat;
         background-color: limegreen;
     }
-`
-
-const StyledLabel = styled.label`
-    cursor: pointer;
-    margin-left: 0.25rem;
 `
 
 export const Checkbox = ({label, variant}) => {

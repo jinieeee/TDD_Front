@@ -25,7 +25,7 @@ type StyledButtonProps = {
 
 export const StyledButton = styled.button<StyledButtonProps>`
     ${({variant}) => {
-        const style = variants[variant]
+        const style = variants[variant];
         
         return css`
             color: ${style.color};

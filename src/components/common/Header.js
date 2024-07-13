@@ -1,23 +1,48 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { useState } from 'react';
+import { Dialog, Popover } from '@headlessui/react';
 import {
-    ArrowPathIcon,
-    Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
-    XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
+import { PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 
 const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+  {
+    name: 'Analytics',
+    description: 'Get a better understanding of your traffic',
+    href: '#',
+    icon: ChartPieIcon,
+  },
+  {
+    name: 'Engagement',
+    description: 'Speak directly to your customers',
+    href: '#',
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: 'Security',
+    description: 'Your customers’ data will be safe and secure',
+    href: '#',
+    icon: FingerPrintIcon,
+  },
+  {
+    name: 'Integrations',
+    description: 'Connect with third-party tools',
+    href: '#',
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: 'Automations',
+    description: 'Build strategic funnels that will convert',
+    href: '#',
+    icon: ArrowPathIcon,
+  },
+];
 const callsToAction = [
     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
     { name: 'Contact sales', href: '#', icon: PhoneIcon },
@@ -50,13 +75,13 @@ export default function Header() {
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                    <a href="#" className="text-xl font-semibold leading-6 text-gray-900">
                         뜨내기
                     </a>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        my page <span aria-hidden="true">&rarr;</span>
+                        게시판 <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
             </nav>

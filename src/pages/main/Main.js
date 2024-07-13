@@ -1,11 +1,12 @@
-import BoardGroupList from "../board/BoardGroupList";
+import BoardGroupList from '../board/BoardGroupList';
+import BoardLayout from '../../components/common/BoardLayout';
 
 const Main = () => {
-    return (
-        <>
-        <BoardGroupList/>
-        </>
-    )
-}
+  return (
+    <BoardLayout>
+      <BoardGroupList />
+    </BoardLayout>
+  );
+};
 
 export default Main;

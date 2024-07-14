@@ -18,3 +18,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-carousel .slick-prev {
+  color: black;
+  top: -15px; /* 왼쪽 화살표를 이미지 밖으로 이동 */
+}
+
+.ant-carousel .slick-next {
+  color: black;
+  bottom: -15px;
+}
+
+/* styles/tailwind.css */
+.slick-dots {
+  right: -15px !important;
+}
+
+.slick-dots li button {
+  background-color: gray !important;
+}
+
+.slick-dots li.slick-active button {
+  background-color: black !important;
+}

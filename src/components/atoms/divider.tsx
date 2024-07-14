@@ -36,14 +36,14 @@ const DividerLine = styled.div<DividerProps>`
 const DividerText = styled.div`
     text-align: center;
     white-space: nowrap;
-    flex-grow: 0.1
+    flex-grow: 0.1;
 `
 
 export const Divider = ({ variant, children }) => {
     return (
         <DividerContainer>
             <DividerLine variant={variant}></DividerLine>
-            <DividerText>{children}</DividerText>
+            <DividerText><p className="text-lg font-bold">{children}</p></DividerText>
             <DividerLine variant={variant}></DividerLine>
         </DividerContainer>
     )

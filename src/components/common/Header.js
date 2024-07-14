@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Dialog, Popover } from '@headlessui/react';
+import { Dialog } from '@headlessui/react';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -59,9 +59,10 @@ export default function Header() {
         <header className="bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
-                        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                    <a href="#" className="-m-1.5 p-1.5 flex justify-center">
+                        <span className="sr-only">개발자 이지은, 포트폴리오</span>
+                        <img className="h-8 w-auto mr-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                        <p className="text-xl font-semibold">개발자, 이지은</p>
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -74,11 +75,6 @@ export default function Header() {
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
-                <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <a href="#" className="text-xl font-semibold leading-6 text-gray-900">
-                        뜨내기
-                    </a>
-                </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                         게시판 <span aria-hidden="true">&rarr;</span>
@@ -113,7 +109,7 @@ export default function Header() {
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
-                                    뜨내기
+                                    개발자, 이지은
                                 </a>
                             </div>
                             <div className="py-6">

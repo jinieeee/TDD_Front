@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Layout from './components/common/Layout';
 import BoardList from './pages/board/BoardList';
+import BoardGroupList from './pages/board/BoardGroupList';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,6 +22,7 @@ function App() {
           element={<KakaoAuthHandler />}
         ></Route>
         <Route path="/main" element={<Main />}></Route>
+        <Route path="/boardGroup" element={<BoardGroupList />}></Route>
         <Route path="/group/:groupId" element={<BoardList />}></Route>
       </Route>
     </Routes>

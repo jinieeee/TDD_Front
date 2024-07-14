@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from "react-redux";
+import { Provider } from 'react-redux';
 import store from './modules';
-import {persistStore} from "redux-persist";
-import {PersistGate} from "redux-persist/integration/react";
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
 import 'tailwindcss/tailwind.css';
 
 const persistor = persistStore(store);
